@@ -21,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  * @author firman
  */
+
 @ControllerAdvice
 @Slf4j
 public class GenericExceptionHandler {

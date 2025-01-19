@@ -9,6 +9,7 @@ package com.belajar.ecommerce.common.errors;
  *
  * @author firman
  */
+
 public class BadRequestException extends RuntimeException {
     public BadRequestException(String message) {
         super(message);

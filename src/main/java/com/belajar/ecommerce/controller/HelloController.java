@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  *
  * @author firman
  */
+
 @RestController
 public class HelloController {
     @GetMapping("/hello")

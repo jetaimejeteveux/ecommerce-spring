@@ -9,6 +9,7 @@ package com.belajar.ecommerce.common.errors;
  *
  * @author firman
  */
+
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {
         super(message);
