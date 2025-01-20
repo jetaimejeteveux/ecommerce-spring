@@ -6,8 +6,11 @@
 package com.belajar.ecommerce.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
@@ -38,4 +41,15 @@ public class ProductRequest {
     @NotNull(message = "deskripsi produk tidak boleh kosong")
     @Size(max = 1000, message = "deskripsi produk tidak boleh lebih dari 1000 karakter")
     String description;
+
+    @NotNull(message = "Stok tidak boleh kosong")
+    @Min(value = 0, message = "Stok tidak boleh kurang atau sama dengan 0")
+    private Integer stockQuantity;
+
+    @NotNull(message = "Berat tidak boleh kosong")
+    @Min(value = 1000, message = "Berat tidak boleh kurang dari 1000 gram ")
+    private BigDecimal weight;
+
+    @NotEmpty(message = "Harus ada satu kategori yang dipilih")
+    private List<Long> categoryIds;
 }
